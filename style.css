@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Chiron+Sung+HK:ital,wght@0,200..900;1,200..900&family=Datatype:wght@100..900&family=Delius&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oi&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Dirt&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(#7ee0e6, #4bb8c4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+  flex-direction: column;
+}
+
+#menu {
+  background: rgba(0,0,0,0.7);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+}
+
+#tit{
+  font-size: 40px;
+font-family: "Rubik Dirt", system-ui;
+}
+
+input {
+  padding: 10px;
+  width: 200px;
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#msg {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.7;
+}

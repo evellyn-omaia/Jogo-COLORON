@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+overflow: hidden;
+  background: #111;
+}
+
+canvas {
+  display: block;
+}
+
+header{
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+#btnVoltar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+
+  padding: 10px 15px;
+  border-radius: 10px;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  backdrop-filter: blur(5px);
+  transition: 0.3s;
+}
+
+#btnVoltar:hover {
+  background: rgba(0,0,0,0.8);
+  transform: scale(1.05);
+}
