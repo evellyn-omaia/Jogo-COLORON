@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>COLORON</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+</head>
+
+<body>
+
+<div class="bgGlow"></div>
+
+<div class="container">
+
+  <h1 id="titulo">
+    <span>C</span>
+    <span>O</span>
+    <span>L</span>
+    <span>O</span>
+    <span>R</span>
+    <span>O</span>
+    <span>N</span>
+  </h1>
+
+  <div class="card">
+
+    <!-- AVATAR -->
+    <div class="avatarArea">
+
+      <img
+        id="avatarSelecionado"
+        src="./avatars/avatar1.png"
+      >
+
+      <div id="avatarPopup">
+
+  <div class="avatars">
+
+        <img
+          class="avatarOption activeAvatar"
+          src="./avatars/Avatar1.png"
+        >
+
+        <img
+          class="avatarOption"
+          src="./avatars/Avatar2.png"
+        >
+
+        <img
+          class="avatarOption"
+          src="./avatars/Avatar3.png"
+        >
+
+        <img
+          class="avatarOption"
+          src="./avatars/Avatar4.png"
+        >
+
+        <img
+          class="avatarOption"
+          src="./avatars/Avatar5.png"
+        >
+
+        </div>
+
+</div>
+
+    <!-- NICK -->
+    <div class="nickArea">
+
+      <input
+        type="text"
+        id="nomeInput"
+        maxlength="15"
+        placeholder="Digite seu nickname"
+      >
+
+      <button id="btnSalvar">
+        <i class="fa-solid fa-check"></i>
+      </button>
+
+      <button id="btnEditar">
+        <i class="fa-solid fa-pen"></i>
+      </button>
+
+    </div>
+
+    <p id="msg"></p>
+
+    <!-- CENÁRIOS -->
+    <div class="cenarios">
+
+      <div
+        class="cenario activeCenario"
+        data-cenario="cenario1"
+      >
+        <img src="./cenarios/cenario1.png">
+      </div>
+
+      <div
+        class="cenario"
+        data-cenario="cenario2"
+      >
+        <img src="./cenarios/cenario2.png">
+      </div>
+
+      <div
+        class="cenario"
+        data-cenario="cenario3"
+      >
+        <img src="./cenarios/cenario3.png">
+      </div>
+
+    </div>
+
+    <button id="btnComecar">
+      COMEÇAR
+    </button>
+
+  </div>
+
+</div>
+
+<button id="btnRanking">
+  🏆
+</button>
+
+<div id="rankingPopup">
+
+  <div id="rankingBox">
+
+    <h2>RANKING</h2>
+
+    <div id="rankingLista">
+
+  <p>Carregando...</p>
+
+</div>
+
+  </div>
+
+</div>
+
+<script type="module" src="menu.js"></script>
+
+</body>
+</html>

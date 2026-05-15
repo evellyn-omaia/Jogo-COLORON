@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  overflow:hidden;
+
+  background:black;
+}
+
+canvas {
+  display: block;
+}
+
+#hud {
+  position: fixed;
+
+  top: 20px;
+  left: 20px;
+
+  display: flex;
+  gap: 15px;
+
+  z-index: 999;
+}
+
+.hudBox {
+  padding: 15px 20px;
+
+  border-radius: 20px;
+
+}
+
+.playerInfo{
+
+  display:flex;
+  align-items:center;
+
+  gap:10px;
+
+  margin-top:8px;
+}
+
+#hudAvatar{
+
+  width:38px;
+  height:38px;
+
+  border-radius:50%;
+
+  object-fit:cover;
+
+  border:2px solid white;
+}
+
+#btnMenu{
+
+  position:fixed;
+
+  top:20px;
+  left:20px;
+
+  z-index:9999;
+
+  border:none;
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  padding:14px 22px;
+
+  border-radius:18px;
+
+  font-size:17px;
+  font-weight:700;
+
+  color:white;
+
+  cursor:pointer;
+
+  background:
+  rgba(15,23,42,0.75);
+
+  backdrop-filter:blur(15px);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  transition:0.25s;
+
+  box-shadow:
+  0 0 20px rgba(0,0,0,0.3);
+}
+
+#btnMenu:hover{
+
+  transform:
+  translateY(-3px)
+  scale(1.03);
+
+  background:
+  rgba(30,41,59,0.9);
+
+  box-shadow:
+  0 0 30px rgba(59,130,246,0.35);
+}
+
+#btnMenu span{
+
+  font-size:20px;
+}
+
+#topHud{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+
+  padding:20px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+
+  z-index:999;
+}
+
+#centerHud{
+
+  position:absolute;
+
+  left:50%;
+
+  transform:translateX(-50%);
+}
+
+#scoreArea{
+
+  text-align:center;
+
+  color:white;
+}
+
+#scoreArea span{
+
+  font-size:14px;
+
+  opacity:0.7;
+
+  letter-spacing:2px;
+}
+
+#score{
+
+  font-size:55px;
+
+  margin-top:5px;
+
+  transition:0.3s;
+}
+
+.scoreFire{
+
+  color:#fff;
+
+  text-shadow:
+  0 0 10px #fff,
+  0 0 20px #ff9500,
+  0 0 40px #ff5100;
+
+  animation:fogo 0.8s infinite alternate;
+}
+
+@keyframes fogo{
+
+  from{
+
+    transform:
+    translateY(0px)
+    scale(1);
+  }
+
+  to{
+
+    transform:
+    translateY(-3px)
+    scale(1.04);
+  }
+}
+
+#rightHud{
+
+  margin-left:auto;
+}
+
+.hudBox{
+
+  padding:15px 20px;
+
+  border-radius:22px;
+
+  background:
+  rgba(15,23,42,0.7);
+
+  backdrop-filter:blur(15px);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  color:white;
+}
