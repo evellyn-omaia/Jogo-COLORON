@@ -87,18 +87,23 @@ function gerarPlataformas() {
   let x = 300;
   let y = canvas.height - 250;
 
-  for (let i = 0; i < 20; i++) {
-    let gap = 100 + Math.random() * 150;
+  for (let i = 0; i < 35; i++) {
+    let gap = 120 + Math.random() * 160;
+    let variacao = (Math.random() - 0.5) * 140;
 
-    let variacao = (Math.random() - 0.5) * 120;
     y += variacao;
 
-    if (y > canvas.height - 120) y = canvas.height - 120;
-    if (y < canvas.height - 400) y = canvas.height - 400;
+    if (y > canvas.height - 120) {
+      y = canvas.height - 120;
+    }
+
+    if (y < canvas.height - 420) {
+      y = canvas.height - 420;
+    }
 
     plataformas.push({
-      x,
-      y,
+      x: x,
+      y: y,
       largura: 100,
       altura: 20,
       cor: cores[Math.floor(Math.random() * cores.length)],
@@ -301,15 +306,30 @@ function update() {
 
   // reciclar plataformas
   for (let p of plataformas) {
-    if (p.x - cameraX < -200) {
-      let ultimo = plataformas[plataformas.length - 1];
+  if (p.x - cameraX < -200) {
 
-      p.x = ultimo.x + 100 + Math.random() * 150;
-      p.y = canvas.height - 120 + (Math.random() - 0.5) * 120;
-      p.cor = cores[Math.floor(Math.random() * cores.length)];
-      p.pontuada = false;
+    let maiorX = Math.max(...plataformas.map(plataforma => plataforma.x));
+
+    let ultimaPlataforma = plataformas.find(plataforma => plataforma.x === maiorX);
+
+    let gap = 120 + Math.random() * 160;
+
+    let novoY = ultimaPlataforma.y + (Math.random() - 0.5) * 140;
+
+    if (novoY > canvas.height - 120) {
+      novoY = canvas.height - 120;
     }
+
+    if (novoY < canvas.height - 420) {
+      novoY = canvas.height - 420;
+    }
+
+    p.x = maiorX + gap;
+    p.y = novoY;
+    p.cor = cores[Math.floor(Math.random() * cores.length)];
+    p.pontuada = false;
   }
+}
 }
 
 // ================= RANKING =================
